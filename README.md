@@ -29,9 +29,10 @@ The production-ready static site is written to `dist/`.
 
 ### Cloudflare Pages
 
-The project is ready for Git-based Cloudflare Pages deployment. The included
-`public/_redirects` file is copied into `dist/` during the Vite build and
-sends single-page-app routes back to `index.html`.
+The project is ready for Git-based Cloudflare Pages deployment. It does not
+include a custom `_redirects` file: Cloudflare Pages automatically treats a
+site with no top-level `404.html` as a single-page application and falls back
+to the root app for client-side navigation.
 
 1. In Cloudflare, create a **Pages** application and connect the GitHub repository.
 2. Select the `main` production branch.
