@@ -36,7 +36,7 @@ sends single-page-app routes back to `index.html`.
 1. In Cloudflare, create a **Pages** application and connect the GitHub repository.
 2. Select the `main` production branch.
 3. Set the build command to `npm run build` and the build output directory to `dist`.
-4. Use Node.js 22 (or another Node.js version supported by Vite), then deploy.
+4. Deploy. The committed `.node-version` pins the Pages build to Node.js 22.16.0.
 
 No environment variables are required. Cloudflare will provide a free
 `*.pages.dev` URL after the first successful deployment.
